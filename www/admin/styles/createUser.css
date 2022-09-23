@@ -1,0 +1,21 @@
+#btnCreate {
+  background: rgb(144, 12, 63);
+  background: linear-gradient(
+    130deg,
+    rgba(144, 12, 63, 1) 30%,
+    rgba(144, 12, 63, 1) 30%,
+    rgba(199, 0, 57, 1) 70%
+  );
+}
+.input-group-text {
+  width: 50px;
+  padding-top: 10px;
+}
+.lblname {
+  padding-top: 5px;
+}
+.form-control,
+.form-control:active,
+.form-control:focus {
+  box-shadow: none;
+}

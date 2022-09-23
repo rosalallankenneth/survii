@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Survii - About</title>
+    <link rel="icon" href="../assets/favicon.png" />
+    <script src="../lib/js.cookie.min.js"></script>
+    <script src="scripts/controllers/userData.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="../lib/bootstrap-4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/about.css" />
+
+    <!-- custom made components -->
+    <script src="scripts/components/NavbarHeader.js"></script>
+    <script src="scripts/components/NavbarDrawer.js"></script>
+  </head>
+  <body>
+    <script>
+      // display navbar header and drawer
+      NavbarHeader();
+      NavbarDrawer(5);
+    </script>
+    <div id="main-content" class="container pb-4">
+      <h2 class="text-center">About</h2>
+      <hr />
+      <div class="container">
+        <p class="lead text-justify my-4">
+          <span id="start-word" class="h2"
+            ><span>Sur</span><span>vii</span></span
+          >
+          is a multiple-choice survey app that provides a platform for people to
+          manage (as Creators) and answer (as Respondents) online surveys.
+        </p>
+        <h4 class="my-4">How it works</h4>
+        <p class="lead text-justify">
+          <b>Survey Creators</b> can view, create, update, and delete their
+          surveys. They can keep track of the number of responses, view the
+          results, and close their surveys, among other features. Survey results
+          are private, and only the survey creator can see them.
+        </p>
+        <p class="lead text-justify">
+          <b>Survey Respondents</b> can view and answer surveys that the Survey
+          Creators publish. They can submit survey responses anonymously as they
+          will only get added to the list of respondents without revealing their
+          responses.
+        </p>
+      </div>
+    </div>
+    <script src="cordova.js"></script>
+    <script src="../lib/js.cookie.min.js"></script>
+
+    <!-- import jquery and bootstrap scripts -->
+    <script src="../lib/jquery-3.5.1.min.js"></script>
+    <script src="../lib/bootstrap-4.0.0/js/bootstrap.min.js"></script>
+    <script src="scripts/global.js"></script>
+
+    <!-- import font-awesome -->
+    <link rel="stylesheet" href="../lib/font-awesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../lib/font-awesome/css/brands.min.css" />
+    <link rel="stylesheet" href="../lib/font-awesome/css/solid.min.css" />
+  </body>
+</html>

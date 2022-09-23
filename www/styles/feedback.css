@@ -1,0 +1,9 @@
+#btn-submitFeedback {
+  background: rgb(144, 12, 63);
+  background: linear-gradient(
+    130deg,
+    rgba(144, 12, 63, 1) 30%,
+    rgba(144, 12, 63, 1) 30%,
+    rgba(199, 0, 57, 1) 70%
+  );
+}

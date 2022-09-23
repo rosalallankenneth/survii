@@ -1,0 +1,53 @@
+.btn-backToDashboard,
+.btn-backToDashboard:hover {
+  text-decoration: none;
+}
+.btn-confirms {
+  background: rgb(144, 12, 63);
+  background: linear-gradient(
+    130deg,
+    rgba(144, 12, 63, 1) 30%,
+    rgba(144, 12, 63, 1) 30%,
+    rgba(199, 0, 57, 1) 70%
+  );
+}
+button {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.btn-cancelSurvey {
+  background: #333 !important;
+  color: #fff !important;
+}
+#itemsContainer {
+  display: none;
+}
+.description {
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.choice {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.choice span {
+  cursor: pointer;
+}
+
+.surveyInfo .form-group label {
+  font-weight: 500;
+}
+.surveyInfo .form-group input,
+.surveyInfo .form-group textarea {
+  font-weight: 500;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}

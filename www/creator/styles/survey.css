@@ -1,0 +1,34 @@
+.btn-backToDashboard,
+.btn-backToDashboard:hover {
+  text-decoration: none;
+}
+.btn-confirms {
+  background: rgb(144, 12, 63);
+  background: linear-gradient(
+    130deg,
+    rgba(144, 12, 63, 1) 30%,
+    rgba(144, 12, 63, 1) 30%,
+    rgba(199, 0, 57, 1) 70%
+  );
+}
+button {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.choiceInfo {
+  display: grid;
+  grid-template-columns: auto 40px;
+}
+.votes {
+  text-align: right;
+}
+.bar div {
+  width: 0%;
+}
+.itemDesc {
+  display: flex;
+  flex-direction: row;
+}
+.bar {
+  border: 1px solid #eee;
+}

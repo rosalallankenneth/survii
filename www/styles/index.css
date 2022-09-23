@@ -1,0 +1,67 @@
+#tabs-survey {
+  border: none;
+}
+hr {
+  margin-bottom: 0px;
+}
+.nav.nav-tabs .nav-item {
+  background: #ccc;
+  cursor: pointer;
+}
+.nav-tabs .nav-item a {
+  text-decoration: none;
+  color: #000;
+}
+.nav-button-active {
+  background: #900c3f !important;
+}
+.nav-button-active a {
+  color: #fff !important;
+}
+
+/* survey boxes styles */
+.card-survey {
+  border: #900c3f 1px solid;
+  margin-bottom: 20px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 0;
+}
+.card-survey:hover {
+  background: rgb(144, 12, 63);
+  background: linear-gradient(
+    130deg,
+    rgba(144, 12, 63, 1) 30%,
+    rgba(144, 12, 63, 1) 30%,
+    rgba(199, 0, 57, 1) 70%
+  );
+  box-shadow: inset 0 0 10px 1px rgba(144, 12, 63, 1);
+}
+.card-survey:hover .card-body .card-title,
+.card-survey:hover .card-body .card-text {
+  color: #fff !important;
+}
+.card-survey:hover .card-body .card-subtitle {
+  color: #ddd !important;
+}
+.card-survey .card-body .card-title,
+.card-survey .card-body .card-subtitle,
+.card-survey .card-body .card-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card.card-survey .card-body .card-title {
+  color: #900c3f;
+}
+#btn-search {
+  background: #333;
+}
+.form-search .form-group:first-child {
+  display: grid;
+  grid-template-columns: auto 50px;
+}
+.form-control {
+  outline: none !important;
+  box-shadow: none !important;
+}

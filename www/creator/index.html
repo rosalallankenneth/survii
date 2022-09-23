@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Survii - Creator Dashboard</title>
+    <link rel="icon" href="../assets/favicon.png" />
+    <script src="../lib/js.cookie.min.js"></script>
+    <script src="scripts/controllers/userData.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="../lib/bootstrap-4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+
+    <!-- custom made components -->
+    <script src="scripts/components/NavbarHeader.js"></script>
+    <script src="scripts/components/NavbarDrawer.js"></script>
+    <script src="scripts/components/DashboardSurveyBox.js"></script>
+
+    <!-- import my custom built controller functions for http requests -->
+    <script src="scripts/controllers/HttpRequest.js"></script>
+  </head>
+  <body>
+    <script>
+      // display navbar header and drawer
+      NavbarHeader();
+      NavbarDrawer(1);
+    </script>
+    <div id="main-content" class="container">
+      <h2>Dashboard</h2>
+      <hr />
+
+      <div id="tabs-survey" class="card mb-4 bg-white text-dark w-100">
+        <div class="card-header bg-white">
+          <ul
+            class="nav nav-tabs card-header-tabs bg-white"
+            id="card-nav"
+            role="tablist"
+          >
+            <!-- Your Surveys Tab -->
+            <li class="nav-item nav-button-active py-2 px-4 mr-0 mr-sm-2">
+              <a
+                class="nav-button"
+                href="#section-yourSurveys"
+                role="tab"
+                aria-selected="true"
+              >
+                <span class="fa fa-stream"></span>
+                <span class="d-lg-inline d-none ml-2">
+                  Your Surveys
+                  <span id="count-yourSurveys" class="ml-2"></span>
+                </span>
+              </a>
+            </li>
+            <!-- Open Surveys Tab -->
+            <li class="nav-item py-2 px-4 mr-0 mr-sm-2">
+              <a
+                class="nav-button"
+                href="#section-openSurveys"
+                role="tab"
+                aria-selected="false"
+              >
+                <span class="fa fa-lock-open"></span>
+                <span class="d-lg-inline d-none ml-2">
+                  Open Surveys
+                  <span id="count-openSurveys" class="ml-2"></span
+                ></span>
+              </a>
+            </li>
+            <!-- Closed Surveys Tab -->
+            <li class="nav-item py-2 px-4 mr-0 mr-sm-2">
+              <a
+                class="nav-button"
+                href="#section-closedSurveys"
+                role="tab"
+                aria-selected="false"
+              >
+                <span class="fa fa-lock"></span>
+                <span class="d-lg-inline d-none ml-2">
+                  Closed Surveys
+                  <span id="count-closedSurveys" class="ml-2"></span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card-body px-0">
+          <div class="tab-content">
+            <!-- all your surveys section -->
+            <div
+              class="tab-pane active"
+              id="section-yourSurveys"
+              role="tabpanel"
+              aria-labelledby="all-tab"
+            >
+              <div id="form-search-all" class="form form-search">
+                <div class="form-group">
+                  <input
+                    id="txt-search-all"
+                    type="text"
+                    class="form-control txt-search rounded-0"
+                    required
+                    disabled
+                    placeholder="Click right button to toggle search mode"
+                  />
+                  <button
+                    id="btn-search-all"
+                    type="submit"
+                    data-searchMode="false"
+                    class="btn btn-search btn-success rounded-0 border-0 text-white"
+                  >
+                    <span id="icon-searchAll" class="fa fa-search"></span>
+                  </button>
+                </div>
+              </div>
+
+              <h6>All your surveys are shown here.</h6>
+              <div id="container-yourSurveys">
+                <div class="row mt-3">
+                  <p class="surveys-loading container lead text-center col-12">
+                    Loading...
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- open surveys section -->
+            <div
+              class="tab-pane"
+              id="section-openSurveys"
+              role="tabpanel"
+              aria-labelledby="taken-tab"
+            >
+              <h6>
+                Your surveys that are on going and available to the public.
+              </h6>
+              <div id="container-openSurveys">
+                <div class="row mt-3">
+                  <p class="surveys-loading container lead text-center col-12">
+                    Loading...
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- not taken surveys section -->
+            <div
+              class="tab-pane"
+              id="section-closedSurveys"
+              role="tabpanel"
+              aria-labelledby="not-taken-tab"
+            >
+              <h6>Surveys that you have closed for accepting responses.</h6>
+              <div id="container-closedSurveys">
+                <div class="row mt-3">
+                  <p class="surveys-loading container lead text-center col-12">
+                    Loading...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="cordova.js"></script>
+    <script src="../lib/js.cookie.min.js"></script>
+
+    <!-- import jquery and bootstrap scripts -->
+    <script src="../lib/jquery-3.5.1.min.js"></script>
+    <script src="../lib/bootstrap-4.0.0/js/bootstrap.min.js"></script>
+    <script src="scripts/global.js"></script>
+
+    <!-- import font-awesome -->
+    <link rel="stylesheet" href="../lib/font-awesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../lib/font-awesome/css/brands.min.css" />
+    <link rel="stylesheet" href="../lib/font-awesome/css/solid.min.css" />
+
+    <script src="scripts/index.js"></script>
+    <script src="scripts/controllers/dashboard.js"></script>
+    <script src="scripts/controllers/searchSurvey.js"></script>
+  </body>
+</html>

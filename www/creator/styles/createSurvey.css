@@ -1,0 +1,23 @@
+#addItem,
+.addChoice {
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+.con-itemDesc,
+.con-choice {
+  display: grid;
+  grid-template-columns: auto 40px;
+}
+.con-itemDesc .fa-trash,
+.con-choice .fa-trash {
+  padding: 10px 0;
+}
+#btn-createSurvey {
+  background: rgb(144, 12, 63);
+  background: linear-gradient(
+    130deg,
+    rgba(144, 12, 63, 1) 30%,
+    rgba(144, 12, 63, 1) 30%,
+    rgba(199, 0, 57, 1) 70%
+  );
+}

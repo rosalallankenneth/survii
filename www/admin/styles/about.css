@@ -1,0 +1,6 @@
+#start-word span:first-child {
+  color: #900c3f;
+}
+#start-word span:nth-child(2) {
+  color: #c70039;
+}

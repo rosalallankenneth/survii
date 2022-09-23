@@ -1,0 +1,19 @@
+p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0;
+  margin: 0;
+}
+.input-group-text {
+  width: 50px;
+  padding-top: 10px;
+}
+.lblname {
+  padding-top: 5px;
+}
+.form-control,
+.form-control:active,
+.form-control:focus {
+  box-shadow: none;
+}
